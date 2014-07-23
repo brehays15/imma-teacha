@@ -14,31 +14,78 @@ Create a new node app, and from the terminal, enter or cut and paste the followi
 Great, you're set to roll!
 
 
-# This is How You Format A Title
+# Building the SuperHero
 
-**This will format bold text**
+**The beginning to making a great superhero**
 
-Here is an example of how to setup a step for your lesson.  Describe the concept you want your students to learn, show them examples in code (see the javascript format markup, below), and try to describe the concept a few different ways, comparing the concept to more common situations.  Next, create a TODO step, where the student must add a piece of code to the app, for example:
+What we are going to do is make out own superhero by using Java Script. We are going to use codes such as console.log(). Console.log() allows us to print text to the screen. "log" belongs to a built in object called "console". We will use this whenever we need to say somthing on the app. 
 
-**TODO 1 :** Here, create two variables in the same statement, one named `prompt` which will hold the prompt module, and one named `fs` to hold the file-system module:
+**TODO 1 :** In TODO 1 we are going to tell your viewers a greeting such as Hi or Bye. Really simple. 
 
-This is how you format code:
-```javascript
-#!/usr/bin/env node
-
-// TODO 1 : create variables for prompt and fs by calling require in each respective module:
-var 
-    prompt = require("prompt"),
-    fs = require("fs")
-    ;
-```
-
-Often after you've explain the concept, shown code examples, then given some code the student needs to add in a TODO step, the student should be able to run the app so they can see the concept in action.  Remember that if, as in the example below, you want to run the app as an executable, you'll need to ensure at the outset you've run `chmod u+x my-lesson.js` on the file to change its permissions to executable. We have already given executable permissions to the my-lesson.js files included within the lesson plan template, but you should be aware of this caveat if you delete, add, or start from scratch.  Also, remember that if you do create your own files, _if_ they are the main entry point for your app and you entend them to run as executables, you'll need to add the <a href="https://github.com/jfraboni/simple-node-app/wiki/Shebang" target="_blank">Shebang</a> for node at the top of the file.  See the top of my-lesson.js for an example.
+    // TODO 1 : create variables for prompt and fs by calling require in each respective module:
+     var welcomeMessage = "Welcome to our awesome superhero building app!"
+     console.log(welcomeMessage);
+    
 
 **Run the App** Switch to the command line, and go ahead and run the app like so:
-And this is how you put a box around your text:
 
     # ./my-lesson.js
+    Welcome to our awesome superhero building app!
+    
+**TODO 2 :** In TODO 2 we are going to begin buliding our superhero. We are going to do that by using objects. 
 
+Everything is an object, even the built-in datatypes, and the more detailed or specialized it needs to be, the more we describe it to the runtime. Objects are basically comprised of two things:
 
-&copy; John Fraboni 2014
+Properties: What the object has, or another way to look at it, it's parts(the superhero) Properties are essentially variables (or constants - values that cannot change).
+
+Behaviours: What the object can do (the superhero can fly,swim fast,read minds ect..) Behaviours are essentially functions or otherwise known as methods.
+
+In JavaScript, the simplest Object is, interestingly, an Object! Think of an object as a piece of clay that you can shape into anything. So when you create one, it's blank, empty, and you fill it or shape it as you need, defining what it's made of and what it can do.
+
+To create one, you can simple do:
+
+    var myObject = {};
+Here, we are assigning to the variable myObject an empty Object. Objects are literally represented with the curly brackets {}, otherwise known as braces. So when we use = {}, we're saying, equals an empty Object. This is called an Object literal, and I like to think it's because this is literally how you make an Object.
+
+    // TODO 2 : Create a variable called person of type Object using the Object literal syntax:
+     var person = {};
+     console.log(person);
+
+Go ahead and run the app again:
+
+    # ./my-lesson.js
+    Welcome to our awesome superhero building app!
+     {}
+Terrific, we have a person Object ...but ...wait, the person is blank! You can see when we logged the person Object using console.log(person);, we were given {}, literally a blank, empty Object! That's a good thing but now were are going to add a little personality to our object.
+     
+**TODO 3 :**  In TODO 3 we are going to give our hero a bit of a personality 
+
+     // TODO 3 : Add firstName and lastName properties to our person:
+     person.firstName = "Jack";
+     person.lastName = "Jones";
+     console.log("First Name: " + person.firstName);
+     console.log("Last Name: " + person.lastName);
+
+Run the app:
+
+     # ./my-lesson.js
+     Welcome to our awesome superhero building app!
+     First Name: Jack
+     Last Name: Jones
+   Cool, because objects are dynamic, meaning we can shape them, they can be altered at runtime, and in the above example, we're using dot notation or dot syntax to create properties on our person Object. We're really saying, 'On the person variable, add or overwrite a property called nameFirst, and assign the String "Jack" to it'. So, after this point, we can execute console.log(person.firstName);, which prints Jack.
+
+**TODO 4 :** In TODO 4 we are going to set our hero in a place. 
+
+    // TODO 4 : Add the city property using Array syntax:
+    person["city"] = "New Orleans";
+    console.log("City: " + person.city);
+
+Alrighty, switch back to the terminal, and run our app again:
+
+    # ./my-lesson.js
+    Welcome to our awesome superhero building app!
+    First Name: Jack
+    Last Name: Jones
+    City: New Orleans
+
+Congrats! Because of time we are just going to name our superhero and put him in a place of superhero awesomeness!!! 
