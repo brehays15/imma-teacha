@@ -22,7 +22,7 @@ What we are going to do is make out own superhero by using Java Script. We are g
 
 **TODO 1 :** In TODO 1 we are going to tell your viewers a greeting such as Hi or Bye. Really simple. 
 
-    // TODO 1 : create variables for prompt and fs by calling require in each respective module:
+    // TODO 1 :  Make a greeting for our App
      var welcomeMessage = "Welcome to our awesome superhero building app!"
      console.log(welcomeMessage);
     
@@ -47,7 +47,7 @@ To create one, you can simple do:
     var myObject = {};
 Here, we are assigning to the variable myObject an empty Object. Objects are literally represented with the curly brackets {}, otherwise known as braces. So when we use = {}, we're saying, equals an empty Object. This is called an Object literal, and I like to think it's because this is literally how you make an Object.
 
-    // TODO 2 : Create a variable called person of type Object using the Object literal syntax:
+    // TODO 2 : Make our object
      var person = {};
      console.log(person);
 
@@ -60,7 +60,7 @@ Terrific, we have a person Object ...but ...wait, the person is blank! You can s
      
 **TODO 3 :**  In TODO 3 we are going to give our hero a bit of a personality 
 
-     // TODO 3 : Add firstName and lastName properties to our person:
+     // TODO 3 : Add firstName and lastName properties to our hero:
      person.firstName = "Jack";
      person.lastName = "Jones";
      console.log("First Name: " + person.firstName);
@@ -76,7 +76,7 @@ Run the app:
 
 **TODO 4 :** In TODO 4 we are going to set our hero in a place. 
 
-    // TODO 4 : Add the city property using Array syntax:
+    // TODO 4 : Add the city to our hero:
     person["city"] = "New Orleans";
     console.log("City: " + person.city);
 
